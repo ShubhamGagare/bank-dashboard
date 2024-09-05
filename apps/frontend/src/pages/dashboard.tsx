@@ -42,7 +42,7 @@ export default function Dashboard() {
       coordinateGetter: sortableKeyboardCoordinates,
     })
   )
-  
+
   const handleDragEnd = (event: DragEndEvent) => {
     const { active, over } = event
 
@@ -55,7 +55,7 @@ export default function Dashboard() {
           position: index,
 
 
-          
+
         }))
       })
       setHasChanges(true)
@@ -91,7 +91,7 @@ export default function Dashboard() {
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-2xl font-bold">Bank Dashboard</h2>
           <div className="text-xl ">
-          Last saved: {lastSaveTime && ` ${format(lastSaveTime, 'HH:mm:ss')}`}
+            Last saved: {lastSaveTime && ` ${format(lastSaveTime, 'HH:mm:ss')}`}
           </div>
         </div>
         <SortableContext items={docs.map(doc => doc.type)} strategy={verticalListSortingStrategy}>
@@ -100,6 +100,7 @@ export default function Dashboard() {
               <SortableCard key={doc.position} {...doc} isDragging={doc.type === activeId} onClick={() => handleCardClick(doc.type)} />
             ))}
           </div>
+
         </SortableContext>
       </div>
 

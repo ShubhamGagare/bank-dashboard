@@ -38,7 +38,7 @@ export default function ImageOverlay({ selectedImage, onClose }: ImageOverlayPro
         </button>
         <img
           className="rounded-lg object-cover w-full h-[80vh]"
-          src={`src/assets/${selectedImage}.png`}
+          src={`${selectedImage}.png`}
           alt={selectedImage}
         />
       </div>

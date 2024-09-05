@@ -46,7 +46,7 @@ const SortableCard = ({ type, title, isDragging, onClick }: SortableCardProps) =
             )}
             <img
   
-              src={`src/assets/${type}.png`}
+              src={`/${type}.png`}
               alt={title}
               onLoad={() => setImageLoaded(true)}
               className={cn("rounded-lg w-full h-full object-cover", {
